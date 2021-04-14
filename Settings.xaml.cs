@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Thimbles
+namespace Thimblerigger
 {
     /// <summary>
     /// Логика взаимодействия для Settings.xaml

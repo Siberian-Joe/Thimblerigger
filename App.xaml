@@ -1,7 +1,7 @@
-﻿<Application x:Class="Thimbles.App"
+﻿<Application x:Class="Thimblerigger.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Thimbles"
+             xmlns:local="clr-namespace:Thimblerigger"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thimbles", "Thimbles.csproj", "{08F69509-10D6-4D33-9C7B-2AFBC5BFBA59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thimblerigger", "Thimblerigger.csproj", "{08F69509-10D6-4D33-9C7B-2AFBC5BFBA59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

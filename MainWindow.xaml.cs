@@ -18,7 +18,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Xml;
 
-namespace Thimbles
+namespace Thimblerigger
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

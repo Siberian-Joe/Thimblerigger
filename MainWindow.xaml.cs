@@ -167,11 +167,13 @@ namespace Thimblerigger
 
         private void defeatEvent()
         {
+            Thimble.finish = false;
             defeat.Visibility = Visibility.Visible;
         }
 
         private void victoryEvent(Thimble thimble)
         {
+            Thimble.finish = false;
             thimble.thimble.Opacity = 0.5;
             victory.Visibility = Visibility.Visible;
         }

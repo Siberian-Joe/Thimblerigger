@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thimblerigger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="Thimblerigger" Height="450" Width="400"
         AllowsTransparency="True" Background="Transparent"
          WindowStyle="None" ResizeMode="NoResize"
          MouseLeftButtonDown="Window_MouseLeftButtonDown">

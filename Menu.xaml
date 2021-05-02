@@ -5,13 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Thimblerigger"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Border Background="White" CornerRadius="10" Grid.RowSpan="2"/>
+        <Image Source="thimblerigger-logo.png" Width="190" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
         <Label Content="Thimblerigger" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="50" FontWeight="Light" FontFamily="Helvetica"/>
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Button x:Name="playButton" Content="Играть" Width="160" Height="40" Margin="1" FontWeight="Light" FontFamily="Helvetica"/>

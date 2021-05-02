@@ -82,15 +82,6 @@ namespace Thimblerigger
         private void clickToContinue_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             clickToContinue.Visibility = Visibility.Collapsed;
-            //for (int i = 0; i < thimbles.Length; i++)
-            //{
-            //    double temp = (thimbles[i].Width + 1) * i;
-
-            //    if (horizontal == true) Moving.MoveTo(thimbles[i], temp, 0);
-            //    else Moving.MoveTo(canvas, 0, temp);
-            //}
-
-            //horizontal = !horizontal;
             thimbles[ballIndex].thimble.Opacity = 1;
 
             count = 0;
@@ -103,6 +94,24 @@ namespace Thimblerigger
 
         void swapElements(int elementA, int elementB)
         {
+            int a = random.Next() % 3;
+            int b = random.Next() % 3;
+
+            while (true)
+            {
+                if (a == b)
+                {
+                    a = random.Next() % 3;
+                    b = random.Next() % 3;
+                    
+                }
+                else
+                    break;
+            }
+
+            Panel.SetZIndex(thimbles[elementA], a);
+            Panel.SetZIndex(thimbles[elementB], b);
+
             animation(elementA, elementB);
             animation(elementB, elementA);
 
@@ -131,23 +140,14 @@ namespace Thimblerigger
                 {
                     a = random.Next(0, 3);
                     b = random.Next(0, 3);
-
                 }
                 else
                     break;
             }
+
+
+
             swapElements(a, b);
-
-            //if ((a = random.Next(0, 3)) == (b = random.Next(0, 3)))
-            //{
-            //    a = random.Next(0, 3);
-            //    b = random.Next(0, 3);
-
-            //    Console.WriteLine(a + " " + b);
-            //}
-            //else
-            //    swapElements(a, b);
-
 
             if (count == requiredCount)
             {
@@ -212,7 +212,6 @@ namespace Thimblerigger
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(((RadioButton)sender).Content);
             switch(((RadioButton)sender).Content)
             {
                 case "Easy":

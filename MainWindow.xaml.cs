@@ -55,6 +55,11 @@ namespace Thimblerigger
             defeat.playButton.Click += playButton_Click;
             defeat.menuButton.Click += menuButton_Click;
 
+            settings.leftSettingsButton.Click += leftSettingsButton_Click;
+            settings.rightSettingsButton.Click += rightSettingsButton_Click;
+
+            settings.leftStyleButton.Click += leftStyleButton_Click;
+            settings.rightStyleButton.Click += rightStyleButton_Click;
 
             addThimbles();
         }
@@ -223,6 +228,97 @@ namespace Thimblerigger
                 case "Hard":
                     difficulty = time / 4;
                     break;
+            }
+        }
+        int settingsCounter = 0;
+
+        private void settingsSwapMenu()
+        {
+            switch (settingsCounter)
+            {
+                case 0:
+                    settings.styleSettingsStackPanel.Visibility = Visibility.Collapsed;
+                    settings.difficultySettingsStackPanel.Visibility = Visibility.Visible;
+                    break;
+                case 1:
+                    settings.difficultySettingsStackPanel.Visibility = Visibility.Collapsed;
+                    settings.styleSettingsStackPanel.Visibility = Visibility.Visible;
+                    break;
+            }
+        }
+        private void leftSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(settingsCounter == 0)
+            {
+                settingsSwapMenu();
+            }
+            else
+            {
+                settingsCounter--;
+                settingsSwapMenu();
+            }
+        }
+
+        private void rightSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (settingsCounter == 1)
+            {
+                settingsSwapMenu();
+            }
+            else
+            {
+                settingsCounter++;
+                settingsSwapMenu();
+            }
+        }
+        int styleCounter = 0;
+
+        private void styleSwapMenu()
+        {
+            switch (styleCounter)
+            {
+                case 0:
+                    Thimble.imagePath = "pack://application:,,,/Thimblerigger;component/thimble.png";
+                    settings.thimble.Source = new BitmapImage(new Uri("pack://application:,,,/Thimblerigger;component/thimble.png"));
+                    break;
+                case 1:
+                    Thimble.imagePath = "pack://application:,,,/Thimblerigger;component/thimble1.png";
+                    settings.thimble.Source = new BitmapImage(new Uri("pack://application:,,,/Thimblerigger;component/thimble1.png"));
+                    break;
+                case 2:
+                    Thimble.imagePath = "pack://application:,,,/Thimblerigger;component/thimble2.png";
+                    settings.thimble.Source = new BitmapImage(new Uri("pack://application:,,,/Thimblerigger;component/thimble2.png"));
+                    break;
+                case 3:
+                    Thimble.imagePath = "pack://application:,,,/Thimblerigger;component/thimble3.png";
+                    settings.thimble.Source = new BitmapImage(new Uri("pack://application:,,,/Thimblerigger;component/thimble3.png"));
+                    break;
+            }
+        }
+
+        private void leftStyleButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (styleCounter == 0)
+            {
+                styleSwapMenu();
+            }
+            else
+            {
+                styleCounter--;
+                styleSwapMenu();
+            }
+        }
+
+        private void rightStyleButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (styleCounter == 3)
+            {
+                styleSwapMenu();
+            }
+            else
+            {
+                styleCounter++;
+                styleSwapMenu();
             }
         }
     }

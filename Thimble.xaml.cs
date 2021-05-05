@@ -23,9 +23,11 @@ namespace Thimblerigger
         public int position { get; set; }
         public static bool finish { get; set; }
         public bool ball { get; set; }
+        public static string imagePath = "pack://application:,,,/Thimblerigger;component/thimble.png";
         public Thimble()
         {
             InitializeComponent();
+            thimble.Source = new BitmapImage(new Uri(imagePath));
             position = 0;
         }
     }

@@ -11,18 +11,34 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+
         <Border Background="White" CornerRadius="10" Grid.RowSpan="2"/>
         <Image Source="settings-logo.png" Width="190" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" RenderOptions.BitmapScalingMode="HighQuality"/>
         <Label Content="Settings" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="50" FontWeight="Light" FontFamily="Helvetica"/>
+        <StackPanel Grid.Row="1">
+            <DockPanel Grid.Row="1" HorizontalAlignment="Center" Margin="5">
+                <Button x:Name="leftSettingsButton" Content="←" Grid.Row="1" Width="30" Height="30" Margin="3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <StackPanel x:Name="difficultySettingsStackPanel"  HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Visibility="Visible">
+                    <Label Content="Difficulty:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontWeight="Light" FontFamily="Helvetica" Grid.Row="1"/>
+                    <StackPanel HorizontalAlignment="Center">
+                        <RadioButton x:Name="easy" Content="Easy"/>
+                        <RadioButton x:Name="normal" Content="Normal" IsChecked="True"/>
+                        <RadioButton x:Name="hard" Content="Hard"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="styleSettingsStackPanel"  HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Visibility="Collapsed">
+                    <Label Content="Style:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontWeight="Light" FontFamily="Helvetica" Grid.Row="1"/>
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button x:Name="leftStyleButton" Content="←" Width="30" Height="30"/>
+                        <Image x:Name="thimble" Source="thimble.png" Width="100" Height="100" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <Button x:Name="rightStyleButton" Content="→" Width="30" Height="30"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="rightSettingsButton" Content="→" Grid.Row="1" Width="30" Height="30" Margin="3" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            </DockPanel>
 
-        <StackPanel HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top">
-            <Label Content="Difficulty:" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontWeight="Light" FontFamily="Helvetica" Grid.Row="1"/>
-            <StackPanel HorizontalAlignment="Center">
-                <RadioButton x:Name="easy" Content="Easy"/>
-                <RadioButton x:Name="normal" Content="Normal" IsChecked="True"/>
-                <RadioButton x:Name="hard" Content="Hard"/>
-            </StackPanel>
+            <Button x:Name="menuButton" Content="В главное меню" Width="160" Height="40" Margin="1" FontWeight="Light" FontFamily="Helvetica" Grid.Row="1" VerticalAlignment="Center"/>
+
         </StackPanel>
-        <Button x:Name="menuButton" Content="В главное меню" Width="160" Height="40" Margin="1" FontWeight="Light" FontFamily="Helvetica" Grid.Row="1" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

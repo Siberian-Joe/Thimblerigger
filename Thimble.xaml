@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="150" Width="150">
     <Grid>
-        <Image Source="ball.png" Width="120" Height="120" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Source="ball.png" Width="115" Height="115" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" RenderOptions.BitmapScalingMode="HighQuality"/>
         <Image x:Name="thimble" Source="thimble.png" RenderOptions.BitmapScalingMode="HighQuality"/>
     </Grid>
 </UserControl>

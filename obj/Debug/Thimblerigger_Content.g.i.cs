@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("settings-logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("thimble1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("thimble2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("thimble3.png")]
 
 
